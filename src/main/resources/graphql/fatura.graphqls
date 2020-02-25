@@ -1,0 +1,17 @@
+type Fatura {
+ id = ID!
+ dataVencimento = Date!
+ mes = String!
+ dataPagamento = Date!
+ valor = Float!
+}
+
+type Query {
+ findAllFaturas: [Fatura]!
+}
+
+type Mutation {
+ newFatura(dataVencimento: Date!, mes: String!, dataPagamento: Date!, valor: Float!) : Fatura!
+ deleteFatura(id:ID!) : Boolean
+ updateFaturaName(dataVencimento: Date!, mes: String!, dataPagamento: Date!, valor: Float!, id:ID!) : Fatura!
+}
