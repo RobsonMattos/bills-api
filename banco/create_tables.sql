@@ -1,10 +1,40 @@
-﻿-- drop table categoria cascade;
+-- SEQUENCE: public.categoria_id_seq
+
+-- DROP SEQUENCE public.categoria_id_seq;
+
+CREATE SEQUENCE public.categoria_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+
+ALTER SEQUENCE public.categoria_id_seq
+    OWNER TO postgres;
+
+-- drop table categoria cascade;
 create table categoria
 (
     id serial PRIMARY KEY,
     nome VARCHAR (50) UNIQUE NOT NULL
 );
 
+-----------------------------------------------------------------------
+
+-- SEQUENCE: public.fatura_id_seq
+
+-- DROP SEQUENCE public.fatura_id_seq;
+
+CREATE SEQUENCE public.fatura_id_seq
+    INCREMENT 1
+    START 22
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+
+ALTER SEQUENCE public.fatura_id_seq
+    OWNER TO postgres;
+	
 -- drop table fatura;
 create table fatura
 (
@@ -14,6 +44,66 @@ create table fatura
 	valor double precision not null,
 	data_pagamento date null
 );
+
+--------------------------------------------------------------------------------------------
+-- SEQUENCE: public.lancamento_categoria_id_seq
+
+-- DROP SEQUENCE public.lancamento_categoria_id_seq;
+
+CREATE SEQUENCE public.lancamento_categoria_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE public.lancamento_categoria_id_seq
+    OWNER TO postgres;
+---------------------------------------------------
+-- SEQUENCE: public.lancamento_fatura_id_seq
+
+-- DROP SEQUENCE public.lancamento_fatura_id_seq;
+
+CREATE SEQUENCE public.lancamento_fatura_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 2147483647
+    CACHE 1;
+
+ALTER SEQUENCE public.lancamento_fatura_id_seq
+    OWNER TO postgres;
+---------------------------------------------------
+-- SEQUENCE: public.lancamento_id_seq
+
+-- DROP SEQUENCE public.lancamento_id_seq;
+
+CREATE SEQUENCE public.lancamento_id_seq
+    INCREMENT 1
+    START 337
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+
+ALTER SEQUENCE public.lancamento_id_seq
+    OWNER TO postgres;
+---------------------------------------------------
+-- SEQUENCE: public.responsavel_id_seq
+
+-- DROP SEQUENCE public.responsavel_id_seq;
+
+CREATE SEQUENCE public.responsavel_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+
+ALTER SEQUENCE public.responsavel_id_seq
+    OWNER TO postgres;
+---------------------------------------------------
+
+---------------------------------------------------
 
 -- drop table lancamento cascade;
 CREATE TABLE lancamento
