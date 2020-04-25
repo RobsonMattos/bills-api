@@ -11,8 +11,8 @@
 	</parent>
 	<groupId>br.com.bills</groupId>
 	<artifactId>bills</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<version>0.0.1</version>
+	<packaging>war</packaging>
 	<name>bills</name>
 	<description>Bills</description>
 
@@ -52,6 +52,14 @@
 			<groupId>com.graphql-java</groupId>
 			<artifactId>graphiql-spring-boot-starter</artifactId>
 			<version>5.0.2</version>
+		</dependency>
+
+	<!-- https://projectlombok.org/ -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.12</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>

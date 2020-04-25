@@ -12,6 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "responsavel")
+//@Getter @Setter
 public class Responsavel implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -29,7 +30,7 @@ public class Responsavel implements Serializable {
 	
 	@Column(name = "email", nullable = false)
 	private String email;
-
+	
 	public Long getId() {
 		return id;
 	}
